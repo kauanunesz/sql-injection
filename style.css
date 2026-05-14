@@ -1,0 +1,173 @@
+/* Tema visual inspirado na identidade institucional da Fatec/CPS
+   Uso didático em laboratório local */
+
+:root {
+    --fatec-vermelho: #b20000;
+    --fatec-vermelho-escuro: #8f0000;
+    --fatec-cinza: #3a3a3a;
+    --fatec-cinza-claro: #f2f2f2;
+    --fatec-branco: #ffffff;
+    --fatec-borda: #dddddd;
+    --fatec-texto: #222222;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(180deg, #f7f7f7 0%, #eeeeee 100%);
+    margin: 0;
+    padding: 30px;
+    color: var(--fatec-texto);
+}
+
+.container {
+    max-width: 1050px;
+    margin: auto;
+    background: var(--fatec-branco);
+    padding: 28px;
+    border-radius: 10px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+    border-top: 8px solid var(--fatec-vermelho);
+}
+
+h1 {
+    color: var(--fatec-vermelho);
+    font-size: 34px;
+    margin-bottom: 8px;
+    border-bottom: 2px solid var(--fatec-vermelho);
+    padding-bottom: 10px;
+}
+
+h2 {
+    color: var(--fatec-cinza);
+    font-size: 26px;
+    margin-top: 28px;
+}
+
+a {
+    color: var(--fatec-vermelho);
+    font-weight: bold;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 14px;
+    margin-top: 20px;
+}
+
+.card {
+    display: block;
+    padding: 18px;
+    background: #ffffff;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--fatec-cinza);
+    border: 1px solid var(--fatec-borda);
+    border-left: 6px solid var(--fatec-vermelho);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    transition: 0.2s ease;
+}
+
+.card:hover {
+    background: #fff5f5;
+    transform: translateY(-2px);
+    border-left-color: var(--fatec-vermelho-escuro);
+}
+
+input, button {
+    padding: 13px;
+    margin: 7px 0;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+    border-radius: 6px;
+}
+
+input {
+    border: 1px solid #bbbbbb;
+    background: #ffffff;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--fatec-vermelho);
+    box-shadow: 0 0 0 2px rgba(178,0,0,0.12);
+}
+
+button {
+    background: var(--fatec-vermelho);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+button:hover {
+    background: var(--fatec-vermelho-escuro);
+}
+
+.resultado {
+    margin-top: 20px;
+    padding: 15px;
+    background: var(--fatec-cinza-claro);
+    border-left: 6px solid var(--fatec-vermelho);
+    border-radius: 6px;
+}
+
+.erro {
+    border-left-color: #b20000;
+    background: #fff0f0;
+}
+
+.sucesso {
+    border-left-color: #198754;
+    background: #ecfff4;
+}
+
+.codigo {
+    background: #1f1f1f;
+    color: #00ff66;
+    padding: 14px;
+    overflow-x: auto;
+    border-radius: 8px;
+    border-left: 5px solid var(--fatec-vermelho);
+    font-family: Consolas, Monaco, monospace;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background: #ffffff;
+}
+
+td, th {
+    padding: 11px;
+    border: 1px solid var(--fatec-borda);
+}
+
+th {
+    background: var(--fatec-vermelho);
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+tr:nth-child(even) {
+    background: #fafafa;
+}
+
+.alerta {
+    background: #fff8e1;
+    border-left: 6px solid var(--fatec-vermelho);
+    padding: 14px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    color: #333333;
+}
+
+.alerta strong {
+    color: var(--fatec-vermelho);
+}
