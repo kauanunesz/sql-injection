@@ -1,45 +1,22 @@
-LABORATÓRIO DIDÁTICO - SQL INJECTION
+Nome dos integrantes da dupla;
 
-Uso somente em localhost ou ambiente autorizado.
+   Kaua Nunes de Araujo
+   Matheus Gonçalves dos Santos
 
-COMO INSTALAR NO XAMPP
-1. Copie a pasta testesqlinjection_lab para:
-   C:\xampp\htdocs\testesqlinjection_lab
+Explicação da vulnerabilidade;
 
-2. Abra o XAMPP e inicie:
-   - Apache
-   - MySQL
+   Login: O código juntava as informações do usuário direto no comando SQL, permitindo dessa forma alterar a lógica da consulta e aplicar um SQL Injection.
+   Busca por ID:
+   Pesquisa:
+   Exclusão:
+   Blind:
 
-3. Acesse o phpMyAdmin:
-   http://localhost/phpmyadmin
+Explicação da correção aplicada;
 
-4. Importe o arquivo banco.sql
+   Login:
+   Busca por ID:
+   Pesquisa:
+   Exclusão:
+   Blind:
 
-5. Acesse:
-   http://localhost/testesqlinjection_lab/index.php
-
-USUÁRIOS DE TESTE
-admin@teste.com / 123456
-aluno@teste.com / 123456
-
-ROTEIRO RÁPIDO
-1. Login vulnerável:
-   admin@teste.com' OR '1'='1' #
-   senha: qualquer coisa
-
-2. Busca por ID:
-   1 OR 1=1
-   1 UNION SELECT 1, database(), user(), 'teste'
-
-3. Produtos:
-   %' OR '1'='1' #
-   %' UNION SELECT id, nome, email, perfil FROM usuarios #
-
-4. Exclusão:
-   1 OR 1=1
-
-5. Blind:
-   1' AND '1'='1' #
-   1' AND '1'='2' #
-
-Depois, repetir nas telas seguras e comparar.
+Como executar o projeto localmente.
