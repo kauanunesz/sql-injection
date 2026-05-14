@@ -28,14 +28,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql->bind_param("ss", $email, $senha);
     $sql->execute();
     $result = $sql->get_result();
-    $usuario = $result->fetch_assoc();
 
-    echo "<h3>SQL gerado:</h3><pre class='codigo'>" . htmlspecialchars($sql) . "</pre>";
-
-    $resultado = $conn->query($sql);
-
-    if ($resultado && $resultado->num_rows > 0) {
-        $usuario = $resultado->fetch_assoc();
+    if ($result && $result->num_rows > 0) {
+        $usuario = $result->fetch_assoc();
         echo "<div class='resultado sucesso'>Login realizado como: <strong>" . htmlspecialchars($usuario["nome"]) . "</strong> (" . htmlspecialchars($usuario["perfil"]) . ")</div>";
     } else {
         echo "<div class='resultado erro'>Login ou senha inválidos.</div>";
@@ -48,6 +43,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <pre class="codigo">admin@teste.com' OR '1'='1' #</pre>
     <p>Senha: qualquer coisa.</p>
 </div>
-<?=$stmt->close();?>
+
 </body>
 </html>
