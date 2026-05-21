@@ -29,6 +29,7 @@
         <a class="card" href="produtos_seguro.php">Pesquisa segura</a>
         <a class="card" href="admin_excluir_seguro.php">Exclusão segura</a>
         <a class="card" href="blind_seguro.php">Blind seguro</a>
+        <a class="card" href="criptografia_hash.php">Criptografia Hash</a>
     </div>
 
     <h2>Usuários de teste</h2>
